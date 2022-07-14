@@ -266,9 +266,9 @@ h3 {
 .intro__title {
   margin-top: 3em;
   font-family: var(--primary-font);
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: var(--white);
 }
 
