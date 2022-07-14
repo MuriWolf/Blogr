@@ -7,6 +7,7 @@
     width: 140px;
     padding: 0.6em 0;
 
+    font-family: var(--secondary-font);
     font-weight: 700;
     text-align: center;
     text-decoration: none;
@@ -17,19 +18,28 @@
     border-radius: 100px;   
 }
 
+.intro__btns {
+    margin-top: 4em;
+}
+
 .signup-btn {
     background-image: linear-gradient(to right, var(--very-light-red),
     var(--light-red));
     color: var(--white);
 
     &:hover {
-        background-color: var(--very-light-red--CTA-hover);
         background-image: none;
+        background-color: var(--very-light-red--CTA-hover);
+        color: var(--white);
     }
 }
 
-.intro__btns {
-    margin-top: 5em;
+@include br.for-size(medium) {
+    .signup-btn {
+        background-image: none;
+        background-color: var(--white);
+        color: var(--light-red--CTA-text);
+    }
 }
 
 .start-for-free__btn {

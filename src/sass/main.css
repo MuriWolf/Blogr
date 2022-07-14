@@ -236,6 +236,7 @@ h3 {
 .footer {
   padding-top: 80px;
   padding-bottom: 40px;
+  margin-top: 150px;
   background-color: var(--very-dark-black-blue);
   text-align: center;
   border-top-right-radius: var(--border-section);
@@ -364,7 +365,7 @@ h3 {
   content: attr(data-title);
   font-size: 1.8rem;
   color: var(--white);
-  font-weight: 400;
+  font-weight: 700;
   display: block;
   margin-bottom: 1.5em;
 }
@@ -406,7 +407,7 @@ h3 {
 @media (min-width: 900px) {
   .picture-section__img {
     position: absolute;
-    width: 50%;
+    width: 60%;
     top: -10%;
   }
   .section1__img {
@@ -427,6 +428,7 @@ h3 {
   display: inline-block;
   width: 140px;
   padding: 0.6em 0;
+  font-family: var(--secondary-font);
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -435,19 +437,27 @@ h3 {
   border-radius: 100px;
 }
 
+.intro__btns {
+  margin-top: 4em;
+}
+
 .signup-btn {
   background-image: linear-gradient(to right, var(--very-light-red), var(--light-red));
   color: var(--white);
 }
 .signup-btn:hover {
-  background-color: var(--very-light-red--CTA-hover);
   background-image: none;
+  background-color: var(--very-light-red--CTA-hover);
+  color: var(--white);
 }
 
-.intro__btns {
-  margin-top: 5em;
+@media (min-width: 900px) {
+  .signup-btn {
+    background-image: none;
+    background-color: var(--white);
+    color: var(--light-red--CTA-text);
+  }
 }
-
 .start-for-free__btn {
   background-color: var(--white);
   color: #f76c77;
