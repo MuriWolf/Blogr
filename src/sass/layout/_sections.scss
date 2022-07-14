@@ -1,0 +1,66 @@
+@use '../utilities/mixins' as mx;
+@use '../utilities/breakpoints' as br;
+
+.section {
+    margin-bottom: 90px;
+    margin-top: 90px;
+}
+
+.section--dark {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background-color: var(--dark-section-bg-color);
+}
+
+.intro {
+    position: relative;
+    z-index: 0;
+
+    padding-top: 50px;
+    padding-bottom: 120px;
+
+    background-image:
+    linear-gradient(to right, var(--very-light-red), var(--light-red)),
+    url('../../../images/bg-pattern-intro-mobile.svg');
+    background-position: center;
+    background-size: 200%;
+    background-position-x: 25%;
+    background-position-y: 50%;
+    
+    border-bottom-left-radius: var(--border-section);
+    
+    & > .container {
+        text-align: center;
+    }
+}
+
+.section2 {
+    margin-top: 200px;
+    
+    background-image: url('../../../images/bg-pattern-circles.svg');
+    background-size: 160%;
+    background-position-y: -240px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    border-radius: 0 var(--border-section) 0 var(--border-section);
+}
+
+@include br.for-size(medium) {
+    .section {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .section2 {
+        background-size: 80%;
+        background-position-y: 80%;
+        background-position-x: -80%;
+        & > * {flex: 1;}
+    }
+
+    .section__text {
+        width: 50%;
+    }
+
+}

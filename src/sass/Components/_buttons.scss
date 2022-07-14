@@ -1,0 +1,79 @@
+@use '../utilities/mixins' as mx;
+@use '../utilities/breakpoints' as br;
+
+
+.btn {
+    display: inline-block;
+    width: 140px;
+    padding: 0.6em 0;
+
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all var(--fast-time) var(--cubic-bezier01);
+
+    cursor: pointer;
+    border-radius: 100px;   
+}
+
+.signup-btn {
+    background-image: linear-gradient(to right, var(--very-light-red),
+    var(--light-red));
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--very-light-red--CTA-hover);
+        background-image: none;
+    }
+}
+
+.intro__btns {
+    margin-top: 5em;
+}
+
+.start-for-free__btn {
+    background-color: var(--white);
+    color: #f76c77;
+
+    &:hover {
+        background-image: none;
+        background-color: var(--very-light-red--CTA-hover);
+        color: var(--white);
+    }
+}
+
+.learn-more__btn {
+    margin-left: 0.75em;
+    border: 1px solid var(--white);
+    color: var(--white);
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--very-light-red--CTA-hover);
+    }
+}
+
+.header__btns {
+    @include mx.flexCenter(column);
+    margin-top: 5rem;
+}
+
+.open-nav-btn { 
+    cursor: pointer;
+}
+
+@include br.for-size(medium) {
+    .open-nav-btn {
+        @include mx.hidden;
+    }
+
+    .header__btns {
+        margin: 0;
+        @include mx.flex(row);
+    }
+
+    .login-btn {
+        color: var(--white);
+    }
+}

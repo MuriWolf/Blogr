@@ -1,0 +1,44 @@
+@use '../utilities/mixins' as mx;
+@use '../utilities/breakpoints' as br;
+
+.picture-section__img {    
+    height: 100%;
+    & > * {
+        display: block;
+        max-height: 140%;
+        margin: 0 auto;
+    }
+}
+
+.section2__img {
+    position: absolute;
+    max-height: 64%;
+    top: -180px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+@include br.for-size(medium) {
+    .picture-section__img {
+        position: absolute;
+        width: 50%;
+        top: -10%;
+    }
+
+    .section1__img {
+        right: -14%;
+    }
+
+    .section2__img {
+        max-width: 40%;
+        max-height: 140%;
+        top: -10%;
+        left: 10%;
+        transform: translateX(0%);
+    }
+
+    .section3__img {
+        left: -14%;
+    }
+}

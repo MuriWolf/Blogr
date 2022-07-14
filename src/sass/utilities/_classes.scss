@@ -1,0 +1,42 @@
+@use '../utilities/breakpoints' as br;
+
+.centerText {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.zero-opacity {
+    opacity: 0;
+    transform: translateY(-10%);
+}
+
+.arrow-up {
+    &::after {
+        transform: rotate(180deg);
+    }
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@include br.for-size(medium) {
+    .container {
+        text-align: left;
+    }
+}

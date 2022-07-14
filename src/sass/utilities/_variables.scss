@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+
+    // Fonts
+    --primary-font: 'Overpass', sans-serif;
+    --secondary-font: 'Ubuntu', sans-serif;
+
+    // Colors
+    --light-red--CTA-text: hsl(356, 100%, 66%);
+    --very-light-red--CTA-hover: hsl(355, 100%, 74%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 96%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --very-dark-grayish-bluer: hsl(207, 13%, 34%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+    --dark-section-bg-color: hsl(236, 23%, 26%);
+
+    --very-light-red: hsla(13, 100%, 72%, 0.9);
+    --light-red: hsl(353, 100%, 62%, 0.99);
+
+    // Borders
+    --border-section: 85px;
+    --border-md: 10px;
+    --border-sm: 6px;
+
+    // shadows
+    --box-shadow--lg: 1px 1px 40px hsla(0, 0%, 0%, 0.35);
+    --box-shadow--md: 1px 1px 20px hsla(0, 0%, 0%, 0.35);
+    --box-shadow--sm: 1px 1px 10px hsla(0, 0%, 0%, 0.35);
+
+    // transitions 
+        // cubics bezier
+        --cubic-bezier01: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        // times
+        --really-fast-time: 0.25s;
+        --fast-time: 0.4s;
+        --medium-time: 0.8s;
+        --slow-time: 1.5s;
+}

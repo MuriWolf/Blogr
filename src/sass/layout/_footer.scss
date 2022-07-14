@@ -1,0 +1,27 @@
+@use '../utilities/mixins' as mx;
+@use '../utilities/breakpoints' as br;
+
+.footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-color: var(--very-dark-black-blue);
+    text-align: center;
+    border-top-right-radius: var(--border-section);
+}
+
+@include br.for-size(medium) {
+    .footer {
+        @include mx.flex(row);
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer__nav {
+        @include mx.flex(row);
+        justify-content: space-around;
+        width: 80%;
+        max-width: 1400px;
+
+    }
+}

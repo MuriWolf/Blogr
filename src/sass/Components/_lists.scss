@@ -1,0 +1,115 @@
+@use '../utilities/mixins' as mx;
+@use '../utilities/breakpoints' as br;
+
+.header__title-sublist {
+    font-weight: 600;
+    color: rgb(56, 56, 56);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::after {
+        content: url("../../../images/icon-arrow-dark.svg");
+        display: inline-block;
+        margin-left: 0.5em;
+        transition: all var(--fast-time) var(--cubic-bezier01);
+    }
+}
+
+.header__list {
+    & > .header__item {
+        margin-bottom: 1.75em;
+    }
+}
+
+.header__sublist {
+    margin-top: 1em;
+    transition: all var(--really-fast-time) ease-in;
+    background-color: var(--light-gray);
+    width: 17rem;
+    margin: 0 auto;
+    padding: 1.25em;
+    border-radius: var(--border-sm);
+
+    & > .header__sublist__item {
+        margin-bottom: 0.9em;
+
+        &:first-child {
+            margin-top: 2em;
+        }
+
+        & > .header__sublist__link {
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+@include br.for-size(medium) {
+    .header__list {
+        @include mx.flex(row);
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 7rem;
+
+        & > .header__item {
+                margin-bottom: 0em;
+                text-align: left;
+            }
+    }
+
+    .header__sublist {
+        position: absolute;
+        background-color: var(--white);
+        padding: 16px;
+        border-radius: var(--border-sm);
+    }
+    
+    .header__title-sublist { 
+        color: var(--white);
+        margin-right: 2rem;
+    }
+
+    .header__title-sublist {
+        &::after {
+            content: url("../../../images/icon-arrow-light.svg");
+        }
+    }
+}
+
+.footer__list {
+    margin-top: 2.5em;
+
+    &:before {
+        content: attr(data-title);
+        font-size: 1.8rem;
+        color: var(--white);
+        font-weight: 400;
+        display: block;
+        margin-bottom: 1.5em;
+    }
+}
+
+.footer__list__item {
+    line-height: 3em;
+}
+
+.footer__list__link {
+    color: var(--grayish-blue);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@include br.for-size(medium) {
+    .footer__list__link {
+        text-align: left;
+    }
+}

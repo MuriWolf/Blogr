@@ -1,0 +1,26 @@
+@mixin flex($direction) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin hidden {
+    display: none;
+    visibility: hidden;
+}
+
+@mixin defaultLayout {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: none;
+    box-shadow: none;
+}

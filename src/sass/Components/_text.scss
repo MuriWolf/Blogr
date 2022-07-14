@@ -1,0 +1,32 @@
+@use '../utilities/mixins' as mx;
+@use '../utilities/breakpoints' as br;
+
+.header-title {
+    display: block;
+    width: 80px;
+}
+
+.intro__title {
+    margin-top: 3em;
+    font-family: var(--primary-font);
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.intro__text {
+    margin-top: 0.75em;
+    font-size: 1.9rem;
+    color: var(--white);
+}
+
+.footer__title {
+    margin-bottom: 3em;
+}
+
+@include br.for-size(medium) {
+    .section__title {
+    margin-bottom: 3em;
+}
+}

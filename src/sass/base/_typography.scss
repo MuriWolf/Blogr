@@ -1,0 +1,41 @@
+p,
+a {
+    margin: 0;
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.7;
+    text-decoration: none;
+    color: var(--very-dark-grayish-bluer);
+}
+
+.title--light {
+    color: var(--white);
+}
+
+.text--light {
+    color: var(--grayish-blue);
+} 
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+h2 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--very-dark-blue);
+}
+
+h3 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--very-dark-blue);
+}
