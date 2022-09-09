@@ -25,7 +25,6 @@
     align-items: center;
     gap: 1em;
     margin-top: 4em;
-    background-color: red;
     @include br.for-size(medium) {
         flex-direction: row;
     }
