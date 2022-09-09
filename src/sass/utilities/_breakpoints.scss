@@ -1,6 +1,6 @@
 @mixin for-size($range) {
     $large: 1800px;
-    $medium: 900px;
+    $medium: 935px;
 
     @if $range == large {
         @media (min-width: #{$large}) { @content; }

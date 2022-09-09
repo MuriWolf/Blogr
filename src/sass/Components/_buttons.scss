@@ -19,7 +19,15 @@
 }
 
 .intro__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
     margin-top: 4em;
+    @include br.for-size(medium) {
+        flex-direction: row;
+    }
 }
 
 .signup-btn {
@@ -54,7 +62,6 @@
 }
 
 .learn-more__btn {
-    margin-left: 0.75em;
     border: 1px solid var(--white);
     color: var(--white);
 
